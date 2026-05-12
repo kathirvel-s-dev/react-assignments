@@ -9,7 +9,7 @@ export const QzData =createContext()
 const App = () => {
 
   const [qz1Name,setQz1Name]=useState()
-  const [count, setCount] = useState()
+  const [count, setCount] = useState(0)
 
   
   return (

@@ -5,6 +5,10 @@ import { QzData } from '../App'
 const Home = () => {
   const { count, setCount } = useContext(QzData)
   const nav = useNavigate()
+  function cartCount(){
+    setCount(prev=> prev+1)
+    alert("Successfully added to Cart ")
+  }
   return (
     <div>
       <h1>Welcome to Home page </h1>
@@ -12,21 +16,15 @@ const Home = () => {
       <div>
         <h2>Product 1</h2>
         <p>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, mollitia?</p>
-        <button onClick={() => {
-          setCount((count) => count + 1)
-        }}>Add to Cart </button>
+        <button onClick={cartCount}>Add to Cart </button>
 
         <h2>Product 2</h2>
         <p>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, mollitia?</p>
-        <button onClick={() => {
-          setCount((count) => count + 1)
-        }}>Add to Cart </button>
+        <button onClick={cartCount}>Add to Cart </button>
 
         <h2>Product 3</h2>
         <p>Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, mollitia?</p>
-        <button onClick={() => {
-          setCount((count) => count + 1)
-        }}>Add to Cart </button>
+        <button onClick={cartCount}>Add to Cart </button>
 
         <button onClick={() => {
           nav("/cart")
