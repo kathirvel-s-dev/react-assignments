@@ -16,7 +16,7 @@ function reducerFn(state, action) {
       return { count: state.count - 1}
     case ACTIONS.RESET:
       return { count: 0 }
-      //here also i made mistake state:state.count+1 we want to change the state of count only not state 
+      //here also i made mistake state:state.count+1 here only want to change the state of count only not state 
     default:
       return state
   }
