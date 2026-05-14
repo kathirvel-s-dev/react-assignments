@@ -21,12 +21,9 @@ const ApiFetch = () => {
 
     },[])
 
-
-
  const filteredData  = user.filter ( (user)=>
         user.name.toLowerCase().includes(search.toLowerCase())  ///mistake used {}  but not written return we need to write ()
     )
-
 
   return (
     <div>
@@ -37,7 +34,8 @@ const ApiFetch = () => {
         onChange={(e)=> {
             setSearch(e.target.value)   
         }} />
-        {  filteredData.length ?
+        {  filteredData.length 
+            ?
             filteredData.map( (res) => (
                 <h1 key={res.id}>{res.name}</h1>  ///here too i wrote res.data
             ))

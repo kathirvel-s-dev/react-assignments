@@ -15,7 +15,7 @@ const Prac = () => {
         switch (action.type) {
             case ACTIONS.INCREMENT:
                 return {
-                    count: state.count + 1
+                    count:state.count + 1
                 }
             case ACTIONS.DECREMENT:
                 return {

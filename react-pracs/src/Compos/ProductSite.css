@@ -1,0 +1,39 @@
+.productsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.productCard {
+    background-color: rgb(219, 217, 217);
+    border-radius: 10px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.productCard img {
+    background-color: lightslategray;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.searchBox {
+    width: 300px;
+    padding: 10px 15px;
+    margin: 20px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.searchBox:focus {
+    border-color: royalblue;
+    box-shadow: 0 0 5px lightblue;
+}
