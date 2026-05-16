@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react'
-
+import "./App.css";
 const App = () => {
 
   const [search,setSearch]=useState("")
@@ -27,23 +27,47 @@ const App = () => {
     return slowLoad(products, search)
   } ,[search]) 
 
-  return (
-    <div style={themer}>
-      <h1>Products </h1>
-      <input type="text"
-      onChange={(e)=> setSearch(e.target.value) }
-      />
-      <button onClick={()=> setDark(!dark)}>change theme</button>
-      <ul >
-        {
-          filteredData.map((data,index)=> (
-            <li key={index}>{data}</li>
-          ))
-        }
-      </ul>
 
+  return (
+    <div className={dark ? "app dark" : "app"}>
+      <div className="container">
+        <h1>Products</h1>
+
+        <input
+          type="text"
+          placeholder="Search product..."
+          onChange={(e) => setSearch(e.target.value)}
+        />
+
+        <button onClick={() => setDark(!dark)}>
+          Change Theme
+        </button>
+
+        <ul>
+          {filteredData.map((data, index) => (
+            <li key={index}>{data}</li>
+          ))}
+        </ul>
+      </div>
     </div>
-  )
+  );
+  // return (
+  //   <div style={themer}>
+  //     <h1>Products </h1>
+  //     <input type="text"
+  //     onChange={(e)=> setSearch(e.target.value) }
+  //     />
+  //     <button onClick={()=> setDark(!dark)}>change theme</button>
+  //     <ul >
+  //       {
+  //         filteredData.map((data,index)=> (
+  //           <li key={index}>{data}</li>
+  //         ))
+  //       }
+  //     </ul>
+
+  //   </div>
+  // )
 }
 
 export default App
